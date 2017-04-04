@@ -3,4 +3,4 @@ jdk:
   -oraclejdk8
 
 scripts:
-  ./run.sh
+  sh run.sh
