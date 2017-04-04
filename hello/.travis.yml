@@ -1,6 +1,6 @@
 language: java
 jdk:
-  -oraclejdk8
+  - oraclejdk8
 
-scripts:
-  -cd java
+script:
+  - sh run.sh
