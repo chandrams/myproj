@@ -3,4 +3,5 @@ jdk:
   - oraclejdk8
 
 script:
-  - sh run.sh
+  - javac Hello.java
+  - java Hello
