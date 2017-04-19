@@ -23,5 +23,6 @@ env:
   - PATH=${JAVA_HOME}/bin:${PATH}
 
 script:
+  - /opt/ibm/java/bin/java -version
   - javac hello/Hello.java
   - java -showversion hello.Hello
