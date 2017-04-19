@@ -24,6 +24,7 @@ env:
 
 script:
   - /opt/ibm/java/bin/java -version
-  - /opt/ibm/java-x86_64-80/bin/java -version
+  - echo $JAVA_HOME
+  - echo $PATH
   - javac hello/Hello.java
   - java -showversion hello.Hello
