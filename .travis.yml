@@ -1,8 +1,27 @@
 language: java
-jdk:
-  - oraclejdk8
-  - oraclejdk7
+#jdk:
+#  - oraclejdk8
+#  - oraclejdk7
+  
+cache:
+  directories:
+    - $HOME/.m2/repository
+
+before_install:
+# install IBM JDK8
+  - JAVA_VER=8.0
+  - JAVA_SR=3
+  - JAVA_FP=0 
+  - curl -sS -O https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/8.0.3.12/linux/x64/ibm-java-x86_64-sdk-8.0-3.12.bin
+  - echo "USER_INSTALL_DIR=/opt/ibm/java" > installer.properties
+  - echo "LICENSE_ACCEPTED=TRUE" >> installer.properties
+  - chmod +x ibm-java-x86_64-sdk-8.0-3.12.bin
+  - sudo ./ibm-java-x86_64-sdk-8.0-3.12.bin -i silent
+env:
+  global:
+  - JAVA_HOME=/opt/ibm/java-x86_64-80
+  - PATH=${JAVA_HOME}/bin:${PATH}
 
 script:
   - javac hello/Hello.java
-  - java hello.Hello
+  - java -showversion hello.Hello
