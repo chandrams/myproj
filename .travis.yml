@@ -26,5 +26,5 @@ script:
   - /opt/ibm/java/bin/java -version
   - echo $JAVA_HOME
   - echo $PATH
-  - javac hello/Hello.java
-  - java -showversion hello.Hello
+  - $JAVA_HOME/bin/javac hello/Hello.java
+  - $JAVA_HOME/bin/java -showversion hello.Hello
