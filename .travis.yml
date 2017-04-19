@@ -19,7 +19,7 @@ before_install:
   - sudo ./ibm-java-x86_64-sdk-8.0-3.12.bin -i silent
 env:
   global:
-  - JAVA_HOME=/opt/ibm/java-x86_64-80
+  - JAVA_HOME=/opt/ibm/java
   - PATH=${JAVA_HOME}/bin:${PATH}
 
 script:
