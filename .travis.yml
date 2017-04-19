@@ -20,7 +20,7 @@ before_install:
 env:
   global:
   - JAVA_HOME=/opt/ibm/java
-  - PATH=${JAVA_HOME}/bin:${PATH}
+  - PATH=$JAVA_HOME/bin:$PATH
 
 script:
   - /opt/ibm/java/bin/java -version
