@@ -28,4 +28,5 @@ script:
   - echo $PATH
   - $JAVA_HOME/bin/javac hello/Hello.java
   - $JAVA_HOME/bin/java -showversion hello.Hello
+  - javac hello/Hello.java
   - java -showversion hello.Hello
