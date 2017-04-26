@@ -20,12 +20,17 @@ env:
   - PATH=$JAVA_HOME/bin:$PATH
   matrix:
    - COOKBOOK_PATH="https://github.com/chandrams/travis-cookbooks/tree/ibmjdk-travisci/cookbooks"
+   
+addons:
+  apt:
+    packages:
+      - oracle-java6-installer
 
 jdk:
   - oraclejdk8
-  - oraclejdk7
-  - oraclejdk9
-  - ibmjdk8
+# - oraclejdk7
+# - oraclejdk9
+# - ibmjdk8
   
 script:
   - /opt/ibm/java/bin/java -version
