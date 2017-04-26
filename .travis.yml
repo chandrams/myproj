@@ -22,6 +22,7 @@ env:
   global:
   - JAVA_HOME=/opt/ibm/java
   - PATH=$JAVA_HOME/bin:$PATH
+  - COOKBOOK_PATH=https://github.com/chandrams/travis-cookbooks/tree/ibmjdk-travisci
 
 script:
   - /opt/ibm/java/bin/java -version
