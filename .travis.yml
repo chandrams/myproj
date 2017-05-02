@@ -40,3 +40,4 @@ script:
   - $JAVA_HOME/bin/java -showversion hello.Hello
   - javac hello/Hello.java
   - java -showversion hello.Hello
+  - ls -l /usr/lib/jvm
