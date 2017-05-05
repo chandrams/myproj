@@ -33,6 +33,7 @@ jdk:
 # - ibmjdk8
   
 script:
+  - ls -l /usr/lib/jvm
   - /opt/ibm/java/bin/java -version
   - echo $JAVA_HOME
   - echo $PATH
