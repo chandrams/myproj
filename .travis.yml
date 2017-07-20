@@ -21,10 +21,6 @@ env:
   matrix:
    - COOKBOOK_PATH="https://github.com/chandrams/travis-cookbooks/tree/ibmjdk-travisci/cookbooks"
    
-addons:
-  apt:
-    packages:
-      - oracle-java6-installer
 
 jdk:
   - oraclejdk8
