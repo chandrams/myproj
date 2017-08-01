@@ -1,24 +1,21 @@
 language: java
 
-cache:
-  directories:
-    - $HOME/.m2/repository
-
-env:
-  global:
-  
-  matrix:
-   - COOKBOOK_PATH="https://github.com/chandrams/travis-cookbooks/tree/ibmjdk-travisci/cookbooks"
-   
-
 jdk:
   - oraclejdk8
-# - oraclejdk7
-# - oraclejdk9
-# - ibmjdk8
+
   
 script:
-  - ls -l /usr/lib/jvm
+  - ls -la /usr/lib/jvm  
   - javac hello/Hello.java
   - java -showversion hello.Hello
-  
+  - which java
+  - ls -l /etc/alternatives
+  - ls -l /usr/bin
+  - jdk_switcher use ibmjava8
+  - java -version
+  - ls -l /etc/alternatives
+
+
+
+
+ 
