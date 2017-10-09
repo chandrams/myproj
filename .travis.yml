@@ -1,20 +1,24 @@
 language: java
 
-jdk:
-  - oraclejdk8
+matrix:
+  include:
+    - os: linux
+      sudo: required
+      group: edge
+      jdk: ibmjava8
+
+    - os: linux
+      sudo: required
+      group: edge
+      jdk: oraclejdk8
 
   
 script:
-  - ls -la /usr/lib/jvm  
+  - ls -l /usr/lib/jvm  
   - javac hello/Hello.java
   - java -showversion hello.Hello
   - which java
-  - ls -l /etc/alternatives
-  - ls -l /usr/bin
-  - jdk_switcher use openjdk7
-  - java -version
-  - jdk_switcher use oraclejdk8
-  - java -version
+  
 
 
 
