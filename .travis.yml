@@ -11,7 +11,7 @@ script:
   - which java
   - ls -l /etc/alternatives
   - ls -l /usr/bin
-  - jdk_switcher use oraclejdk9
+  - jdk_switcher use openjdk7
   - java -version
   - jdk_switcher use oraclejdk8
   - java -version
