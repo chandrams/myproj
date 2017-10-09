@@ -11,10 +11,10 @@ script:
   - which java
   - ls -l /etc/alternatives
   - ls -l /usr/bin
-  - jdk_switcher use ibmjava8
+  - jdk_switcher use oraclejdk9
   - java -version
-  - ls -l /etc/alternatives
-
+  - jdk_switcher use oraclejdk8
+  - java -version
 
 
 
