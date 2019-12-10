@@ -10,7 +10,6 @@ script:
   - java -showversion hello.Hello
   - which java
   - jdk_switcher use ibmjava8
-  - java -version
   - ls -l /etc/alternatives
 
 
